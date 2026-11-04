@@ -1,0 +1,37 @@
+{
+  "name": "hoc-tieng-trung",
+  "version": "1.0.0",
+  "description": "Học và ôn tập từ vựng tiếng Trung từ file Excel",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux"
+  },
+  "dependencies": {
+    "hanzi-writer": "3.5.0",
+    "hanzi-writer-data": "2.0.1",
+    "xlsx": "0.18.5"
+  },
+  "devDependencies": {
+    "electron": "33.4.11",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.example.hoctiengtrung",
+    "productName": "Học Tiếng Trung",
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
